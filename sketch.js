@@ -1,5 +1,5 @@
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth,windowHeight);
   // Sets origin mode to be the rectangle's center
   rectMode(CENTER);
 }
