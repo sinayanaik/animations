@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>solar system</title>
+</head>
+
+<body>
+    <script src="p5.js"></script>
+    <script>
+        var x = 1;
+        function setup() {
+            createCanvas(500, 500);
+        }
+
+        function draw() {
+            background(220);
+            fill(0);
+            translate(250, 250);
+            angleMode(DEGREES);
+            circle(0, 0, 20);
+
+            rotate(1 * x);
+            circle(30, 30, 5);
+
+            rotate(0.7 * x);
+            circle(40, 40, 5);
+
+            rotate(0.2 * x);
+            circle(50, 50, 5);
+
+            rotate(0.3 * x);
+            circle(60, 60, 5);
+
+            rotate(1 * x);
+            circle(70, 70, 10);
+
+            rotate(1 * x);
+            circle(100, 100, 5);
+
+            rotate(.32 * x);
+            circle(75, 75, 10);
+
+            rotate(.33 * x);
+            circle(150, 150, 10);
+
+            x++;
+
+        }
+    </script>
+</body>
+
+</html>
