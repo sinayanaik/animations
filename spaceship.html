@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spaceship</title>
+</head>
+<body>
+    <script src="p5.js"></script>
+    <script>
+        let img;
+        let x,y;
+        function setup(){
+            x=25;
+            y=windowHeight-60;
+            createCanvas(windowWidth, windowHeight);
+            img = loadImage('img/spaceship.png');
+        }
+        function draw(){
+            background(125);
+            image(img, x, y,50,56);
+            x>=width-100?(x=25,y-=60):x+=10;
+            if(y<=60){y=height-60}
+        }
+    </script>
+</body>
+</html>
