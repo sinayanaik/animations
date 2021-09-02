@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HSB color slider</title>
+</head>
+<body>
+    <script src="./p5.js"></script>
+    <script>
+        let slider;
+function setup() {
+  createCanvas(500, 500);
+  pixelDensity(1)
+  colorMode(HSB);
+  rectMode(CENTER);
+  slider = createSlider(0, 360, 100, 10);
+  slider.position(500 / 4, 250);
+  slider.style("width", `${width / 2}px`);
+
+  slider1 = createSlider(0, 360, 100, 10);
+  slider1.position(500 / 4, 200);
+  slider1.style("width", `${width / 2}px`);
+
+  slider2 = createSlider(0, 360, 100, 10);
+  slider2.position(500 / 4, 300);
+  slider2.style("width", `${width / 2}px`);
+}
+
+function draw() {
+  let h = slider.value();
+  let s = slider1.value();
+  let b = slider2.value();
+  
+  background(h, s, b, 1);
+  textSize(20);
+  fill(0);
+  text(`h:${h},s:${s},b:${b}`, 200, 100);
+}
+
+    </script>
+</body>
+</html>
